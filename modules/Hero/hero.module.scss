@@ -1,0 +1,188 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+.hero {
+    padding: 66px 16px 0 16px;
+    background: variables.$primary-background;
+}
+
+.wrapper {
+    @include mixins.flex(flex, center, center);
+    flex-direction: column;
+    gap: 64px;
+}
+
+.title {
+    color: variables.$primary-color;
+    font-size: variables.$font-size40;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+    letter-spacing: 0.4px;
+}
+
+.text {
+    color: variables.$primary-color;
+    font-size: variables.$font-size18;
+    font-style: normal;
+    font-weight: variables.$font-weight300;
+    line-height: 150%;
+    letter-spacing: 0.18px;
+    margin-top: 32px;
+}
+
+.buttonDesktop {
+    display: none;
+}
+
+.imgWrapper {
+    width: 328px;
+    height: 192px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.buttonMobile {
+    width: 328px;
+    height: 48px;
+    display: block;
+    @include mixins.flex(flex, center, center);
+    border-radius: 8px;
+    background: variables.$primary-red;
+    color: variables.$secondary-white;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+    font-family: inherit;
+    letter-spacing: 0.16px;
+    border: none;
+    margin-top: 64px;
+    cursor: pointer;
+}
+
+.imgDesktop {
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .buttonMobile {
+        display: none;
+    }
+
+    .buttonDesktop {
+        width: 328px;
+        height: 48px;
+        display: block;
+        @include mixins.flex(flex, center, center);
+        border-radius: 8px;
+        background: variables.$primary-red;
+        color: variables.$secondary-white;
+        font-size: variables.$font-size16;
+        font-style: normal;
+        font-family: inherit;
+        font-weight: variables.$font-weight400;
+        line-height: 150%;
+        letter-spacing: 0.16px;
+        border: none;
+        margin-top: 64px;
+        cursor: pointer;
+    }
+}
+
+@media(min-width: 992px) {
+   .buttonDesktop {
+        transition: 0.4s all;
+    }
+
+   .buttonDesktop:hover {
+        background: variables.$secondary-blue;
+   }
+}
+
+@media(min-width: 1280px) {
+    .hero {
+        padding: 90px 76px 0 76px;
+        overflow: hidden;
+    }
+
+    .wrapper {
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    .buttonMobile {
+        display: none;
+    }
+
+    .buttonDesktop {
+        width: 262px;
+        height: 48px;
+        @include mixins.flex(flex, center, center);
+        border-radius: 8px;
+        background: variables.$primary-red;
+        color: variables.$secondary-white;
+        font-size: variables.$font-size16;
+        font-style: normal;
+        font-weight: variables.$font-weight400;
+        line-height: 150%;
+        letter-spacing: 0.16px;
+        border: none;
+        margin-top: 104px;
+        text-decoration: none; 
+    }
+    
+    .imgDesktop {
+        display: block;
+    }
+
+    .imgMobile {
+        display: none;
+    }
+
+    .content {
+        flex-shrink: 0;
+        width: 637px;
+    }
+
+    .imgWrapper {
+        width: 653px;
+        height: 624px;
+        position: relative;
+        z-index: -5;
+        right: 75px;
+        top: -72px;
+        img {
+            object-fit: contain;
+        }
+    }
+
+    .imgButtonBlock {
+        position: relative;
+        z-index: 5;
+        flex-shrink: 0;
+    }
+
+    .title {
+        font-size: variables.$font-size72;
+        line-height: 130%;
+        letter-spacing: 0.72px;
+        margin-top: 68px;
+    }
+    
+    .text {
+        width: 547px;
+        font-size: variables.$font-size22;
+        font-weight: variables.$font-weight300;
+        line-height: 150%;
+        letter-spacing: 0.22px;
+        margin-top: 72px;
+    }
+    
+}

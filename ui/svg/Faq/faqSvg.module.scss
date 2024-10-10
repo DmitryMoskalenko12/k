@@ -1,0 +1,15 @@
+.faqSvg {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+@media(min-width: 1280px) {
+    .faqSvg {
+        width: 193px;
+        height: 172px;
+        top: -97px;
+    }
+}

@@ -1,0 +1,236 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+.pricing {
+    background: variables.$primary-background;
+    padding: 88px 16px 0 16px;
+}
+
+.titleBlock {
+    position: relative;
+}
+
+.title {
+    color: variables.$primary-color;
+    font-size: variables.$font-size32;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 130%;
+    letter-spacing: 0.32px;
+    text-align: center;
+    position: relative;
+    top: 5px;
+    z-index: 5;
+}
+
+.hr {
+    position: absolute;
+    left: 50%;
+    top: 47px;
+    transform: translateX(-50%);
+}
+
+.text {
+    color: variables.$primary-color;
+    text-align: center;
+    font-size: variables.$font-size18;
+    font-style: normal;
+    font-weight: variables.$font-weight300;
+    line-height: 150%;
+    letter-spacing: 0.18px;
+    margin-top: 48px;
+}
+
+.swiperMain {
+    margin-top: 48px;
+}
+
+.card {
+    height: 645px;
+    @include mixins.flex(flex, space-between, flex-start);
+    flex-direction: column;
+    padding: 16px 18px;
+    border-radius: 16px;
+    border: 1px solid variables.$secondary-grey-light;
+    background: variables.$secondary-white;
+}
+
+.titleCard {
+    display: inline-block;
+    color: variables.$primary-color;
+    font-size: variables.$font-size22;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+}
+
+.descrCard {
+    color: variables.$secondary-card-text-color;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 150%; 
+    margin-top: 8px;
+}
+
+.price {
+    color: variables.$secondary-blue;
+    font-size: variables.$font-size32;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 150%; 
+    margin-top: 18px;
+}
+
+.item {
+    @include mixins.flex(flex, space-between, center);
+    margin-bottom: 18px;
+}
+
+.itemDescr {
+    color: variables.$secondary-card-text-color;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-weight: variables.$font-weight300;
+    line-height: 150%; 
+}
+
+.res {
+    color: variables.$secondary-card-text-color;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-weight: variables.$font-weight300;
+    line-height: 150%;
+}
+
+.button, .buttonStrong {
+    width: 248px;
+    height: 48px;
+    @include mixins.flex(flex, center, center);
+    border-radius: 8px;
+    background: variables.$primary-red;
+    color: variables.$secondary-white;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+    margin: 0 auto;
+    letter-spacing: 0.16px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.buttonStrong {
+    background: variables.$secondary-blue; 
+}
+
+.subBlock2 {
+    width: 100%;
+}
+
+.price500 {
+    color: variables.$primary-red;
+}
+
+.most {
+    display: inline-block;
+    width: max-content;
+    padding: 2px 10px;
+    margin-left: 16px;
+    border-radius: 6px;
+    border: 1px solid variables.$secondary-bg-most;
+    background: variables.$primary-background;
+    color: variables.$secondary-blue;
+    font-size: variables.$font-size12;
+    font-style: normal;
+    font-weight: variables.$font-weight300;
+    line-height: 20px; 
+}
+
+@media(min-width: 992px) {
+    .card {
+        transition: 0.5s all;
+    }
+
+    .card:hover {
+        background: variables.$secondary-light-blue;
+        
+        .buttonStrong {
+            background: variables.$secondary-blue;
+            transition: 0.4s all;
+        }
+        .button {
+            background: variables.$secondary-blue;
+            transition: 0.4s all;
+        }
+    }
+
+    .button {
+        transition: 0.4s all;
+    }
+
+    .buttonStrong {
+        transition: 0.4s all;
+    }
+
+    .buttonStrong:hover {
+        background: variables.$secondary-blue;
+        transition: 0.4s all;
+    }
+}
+
+@media(min-width: 1280px) {
+    .pricing {
+        padding: 225px 76px 0 76px;
+    }
+
+    .title {
+        font-size: variables.$font-size40;
+        line-height: 130%;
+        letter-spacing: 0.4px;
+        z-index: 5;
+        top: 3px;
+    }
+    
+    .hr {
+        top: 58px;
+    }
+
+    .text {
+        width: 854px;
+        margin: 0 auto;
+        font-size: variables.$font-size32;
+        letter-spacing: 0.32px;
+        margin-top: 64px;
+    }
+
+    .button, .buttonStrong {
+       width: 296px;
+       flex-shrink: 0;
+       background: variables.$primary-red;
+    }
+
+    .item {
+        margin-bottom: 16px;
+    }
+
+    .titleCard {
+        font-size: variables.$font-size32;
+        line-height: 150%;
+    }
+    
+    .price {
+        font-size: variables.$font-size40;
+        line-height: 130%; 
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .card {
+        height: 705px;
+        padding: 32px;
+    }
+
+    .most {
+        font-size: variables.$font-size14;
+    }
+}

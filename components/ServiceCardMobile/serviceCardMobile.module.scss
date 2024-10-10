@@ -1,0 +1,64 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+.cardMobile {
+    border-radius: 8px;
+    background: variables.$secondary-white;
+}
+
+.cardTitle {
+    position: relative;
+    color: variables.$primary-color;
+    text-align: center;
+    font-size: variables.$font-size26;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+    padding-top: 19px;
+    margin-bottom: 18px;
+}
+
+.hrCard {
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cardList {
+    @include mixins.flex(flex, space-between, flex-start);
+    flex-direction: column;
+    position: relative;
+    left: 20px;
+    list-style-type: disc;
+    gap: 10px;
+}
+
+.cardLi {
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+}
+
+.cardMainContent {
+    @include mixins.flex(flex, space-between, center);
+    padding: 25px 16px 24px 16px;
+    background: variables.$secondary-light-blue;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.from {
+    @include mixins.flex(flex, center, center);
+    height: 80px;
+    border-left: 1px solid variables.$secondary-gray;
+    padding-left: 12px;
+}
+
+.price {
+    color: variables.$secondary-blue;
+    font-size: variables.$font-size18;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+}

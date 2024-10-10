@@ -1,0 +1,63 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    div {
+      height: 2px;
+      background-color: variables.$secondary-blue;
+      margin-bottom: 4px;
+      transition: 0.5s all;
+
+      &:nth-child(1) {
+        height: 1px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+      }
+
+      &:nth-child(2) {
+        height: 1px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+      }
+
+      &:nth-child(3) {
+        height: 1px;
+        margin-bottom: 5px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .activeHamburger {
+    width: 25px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+
+    div {
+      margin-bottom: -2px;
+
+      &:nth-child(1) {
+        transform: translateY(8px) rotate(-45deg);
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(2px) rotate(45deg);
+      }
+    }
+  }
+
+  @media(min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+}

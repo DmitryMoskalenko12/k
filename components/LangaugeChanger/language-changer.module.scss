@@ -1,0 +1,52 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+.wrapper {
+  @include mixins.flex(flex, center, center);
+  gap: 12px;
+  align-self: flex-start;
+  margin-top: 16px;
+}
+
+.wrapperStartPage {
+    width: 51px;
+    @include mixins.flex(flex, center, center);
+    gap: 4px;
+}
+
+.divider {
+    height: 25px;
+    width: 2px;
+    background: variables.$secondary-blue;
+    flex-shrink: 0;
+}
+
+.en, .uk {
+    color: variables.$secondary-no-active-lang;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    width: 21px;
+    font-family: inherit;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    background: transparent
+}
+
+.active {
+    @include mixins.flex(flex, center, center);
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .wrapper {
+        align-self: initial;
+        margin-top: 0;
+      }
+}

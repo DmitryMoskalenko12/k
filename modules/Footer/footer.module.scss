@@ -1,0 +1,173 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+.footer {
+    padding: 32px 0;
+    background: variables.$secondary-footer-bg;
+}
+
+.wrapper {
+    @include mixins.flex(flex, center, center);
+    flex-direction: column;
+    gap: 48px;
+}
+
+.logoBlock {
+    display: block;
+}
+
+.logoDesktop {
+    display: none;
+}
+
+.kyrsorDesktop {
+    display: none;
+}
+
+.block2 {
+    @include mixins.flex(flex, center, flex-start);
+    flex-direction: column;
+    gap: 24px;
+}
+
+.link {
+    color: variables.$primary-background;
+    text-align: center;
+    font-size: variables.$font-size18;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+    text-decoration: none;
+}
+
+.phoneBlock, .phoneBlock2, .emailBlock {
+    @include mixins.flex(flex, center, center);
+    gap: 8px;
+}
+
+.phoneBlock2 {
+    margin-top: 24px;
+}
+
+.emailBlock {
+    margin-top: 24px;
+}
+
+.phone, .email {
+    color: variables.$primary-background;
+    text-align: center;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+    text-decoration-line: underline;
+}
+
+.uviten {
+    color: variables.$primary-background;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-weight: variables.$font-weight300;
+    line-height: 24px;
+    text-decoration-line: underline;
+}
+
+.created {
+    text-align: center;
+    color: variables.$primary-background;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-weight: variables.$font-weight300;
+    line-height: 24px;
+    margin-top: 48px;
+}
+
+.kyrsorMobile {
+    color: variables.$primary-background;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px; 
+    margin-top: 24px;
+}
+
+@media(min-width: 768px) {
+    .wrapper {
+        @include mixins.flex(flex, space-between, flex-start);
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .kyrsorMobile {
+        display: none;
+    }
+
+    .kyrsorDesktop {
+        display: block;
+        color: variables.$primary-background;
+        font-size: variables.$font-size16;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 24px;
+    }
+
+    .block1 {
+        height: 100%;
+        @include mixins.flex(flex, space-between, flex-start);
+        gap: 128px;
+        flex-direction: column;  
+    }
+
+    .block3, .phoneEmail {
+        @include mixins.flex(flex, space-between, flex-start);
+        flex-direction: column; 
+    }
+}
+
+@media(min-width: 992px) {
+    .link {
+        transition: 0.5s all;
+    }
+
+    .link:hover {
+        color: variables.$secondary-bg-most;
+    }
+}
+
+@media(min-width: 1280px) {
+    .footer {
+        padding: 32px 76px;
+    }
+
+    .logoDesktop {
+        display: block;
+    }
+
+    .logoMobile {
+        display: none;
+    }
+
+    .block1 {
+        gap: 80px;
+    }
+
+    .block2 {
+        gap: 10px;
+    }
+
+    .emailBlock {
+        margin-top: 12px;
+    }
+
+    .phoneBlock2 {
+        margin-top: 12px;
+    }
+
+    .created {
+        margin-top: 0;
+    }
+
+    .block3 {
+        gap: 19px;
+    }
+}

@@ -1,0 +1,172 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+  .hr {
+   border-bottom: 1px solid variables.$secondary-grey-light;
+   margin-top: 14px;
+   margin-bottom: 16px;
+  }
+
+  .hrActive {
+   border-bottom: 1px solid variables.$secondary-grey-light;
+   margin-top: 14px;
+   margin-bottom: 16px;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .collapse {
+    margin-top: 48px;
+  }
+
+  .titleCollapse {
+    @include mixins.flex(flex, space-between, center);
+    width: 100%;
+    position: relative;
+    text-align: left;
+    font-family: inherit;
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    border: none;
+    background: transparent;
+    padding: 0;
+    top: 6px;
+    cursor: pointer;
+  }
+
+  .titleCollapseActive {
+    @include mixins.flex(flex, space-between, center);
+    width: 100%;
+    font-family: inherit;
+    position: relative;
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.5s all;
+    top: 6px;
+  }
+
+  .helperCollapse {
+    width: 32px;
+    height: 32px;
+    z-index: -3;
+    position: relative;
+    @include mixins.flex(flex, center, center);
+    &::after {
+      content:'';
+      position: absolute; 
+      right: 8px;
+      width: 14px; 
+      height: 2px; 
+      z-index: -3;
+      background: variables.$primary-red; 
+      transform: rotate(-90deg);
+    
+    }
+
+    &::before {
+        content:'';
+        position: absolute; 
+        right: 8px;
+        width: 14px; 
+        height: 2px; 
+        z-index: -3;
+        background: variables.$primary-red; 
+        transform: rotate(0deg);
+      
+    }
+  }
+
+  .helperCollapseActive {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    z-index: -3;
+    background: transparent;
+    @include mixins.flex(flex, center, center);
+    &::before {
+      content: ''; 
+      z-index: -3;
+      position: absolute; 
+      width: 14px; 
+      height: 2px;
+      background: variables.$secondary-blue; 
+      right: 8px;
+      transform: rotate(0deg);
+  }
+  }
+
+  .collapseText {
+    height: 0px;
+    width: 100%;
+    opacity: 0;
+    line-height: 150%;
+    transition: opacity 0.3s ease-in, height 0.3s 0.3s ease-in;
+    pointer-events: none;
+    margin-top: 17px;
+    margin-bottom: 8px;
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight300;
+  }
+
+  .collapseTextActive {
+    width: 100%;
+    opacity: 1;
+    transition: height 0.3s ease-in, opacity 0.3s 0.3s ease-in;
+    line-height: 150%;
+    pointer-events: all;
+    margin-top: 17px;
+    margin-bottom: 8px;
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight300;
+  }
+
+  @media(min-width: 768px) {
+    .collapse {
+        margin-top: 0;
+    }
+  }
+
+  @media(min-width: 1280px) {
+
+    .titleCollapse {
+      font-size: variables.$font-size22;
+      line-height: 150%;
+    }
+  
+    .titleCollapseActive {
+      font-size: variables.$font-size22;
+      line-height: 150%;
+    }
+
+    .collapseText {
+      line-height: 150%;
+      font-size: variables.$font-size18;
+    }
+
+    .collapseTextActive {
+      line-height: 150%;
+      font-size: variables.$font-size18;
+    }
+
+    .hr {
+      margin-top: 16px;
+      margin-bottom: 16px;
+     }
+
+    .hrActive {
+      margin-top: 16px;
+      margin-bottom: 16px;
+     }
+  }

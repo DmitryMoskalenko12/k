@@ -1,0 +1,15 @@
+.teamSvg {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+@media(min-width: 1280px) {
+    .teamSvg {
+        width: 265px;
+        height: 172px;
+        top: -97px;
+    }
+}

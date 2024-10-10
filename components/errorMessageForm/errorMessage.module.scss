@@ -1,0 +1,117 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+.content {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000000000000;
+    padding: 176px 16px 138px 16px;
+    background: variables.$primary-background;
+}
+
+.errorTitle {
+    color: variables.$primary-red;
+    text-align: center;
+    font-size: variables.$font-size32;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 130%; 
+    letter-spacing: 0.32px;
+}
+
+.imgWrapper {
+    width: 301px;
+    height: 226px;
+    margin: 0 auto;
+    margin-top: 64px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .imgDesktop {
+      display: none;
+  }
+  
+  .close {
+      width: 32px;
+      height: 32px;
+      @include mixins.flex(flex, center, center);
+      position: absolute;
+      top: 32px;
+      font-weight: variables.$font-weight300;
+      font-size: variables.$font-size55;
+      right: 32px;
+      z-index: 20;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+  }
+
+  .link {
+    width: 328px;
+    height: 48px;
+    @include mixins.flex(flex, center, center);
+    border-radius: 8px;
+    background: variables.$primary-red;
+    color: variables.$secondary-white;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+    margin: 0 auto;
+    margin-top: 64px;
+    letter-spacing: 0.16px;
+    text-decoration: none;
+  }
+
+  @media(min-width: 992px) {
+    .link {
+        transition: 0.4s all;
+    }
+
+    .link:hover {
+        background: variables.$secondary-blue;
+        transition: 0.4s all;
+    }
+ } 
+
+  @media(min-width: 1280px) {
+    .content {
+        padding: 56px 76px 45px 76px;
+    }
+
+    .errorTitle {
+        width: 821px;
+        margin: 0 auto;
+        font-size: variables.$font-size72;
+        letter-spacing: 0.72px;
+    }
+    
+    .imgWrapper {
+      width: 553px;
+      height: 415px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+
+    .imgMobile {
+        display: none;
+    }
+
+    .imgDesktop {
+        display: block;
+    }
+    
+    .close {
+        top: 32px;
+        font-size: variables.$font-size55;
+        right: 32px;
+        z-index: 20;
+    }
+}

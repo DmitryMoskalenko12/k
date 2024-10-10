@@ -1,0 +1,15 @@
+.formSvg {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+@media(min-width: 1280px) {
+    .formSvg {
+        width: 468px;
+        height: 172px;
+        top: -89px;
+    }
+}

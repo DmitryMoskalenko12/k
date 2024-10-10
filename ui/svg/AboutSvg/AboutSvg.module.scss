@@ -1,0 +1,15 @@
+.aboutSvg {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+@media(min-width: 1280px) {
+    .aboutSvg {
+        width: 306px;
+        height: 172px;
+        top: -90px;
+    }
+}

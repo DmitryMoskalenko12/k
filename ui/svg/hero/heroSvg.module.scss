@@ -1,0 +1,12 @@
+.svgHero {
+    display: none;
+}
+
+@media(min-width: 1280px) {
+    .svgHero {
+        position: absolute;
+        top: 45px;
+        right: 100px;
+        display: block;
+    } 
+}

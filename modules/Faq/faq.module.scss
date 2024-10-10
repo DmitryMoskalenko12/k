@@ -1,0 +1,172 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+.faq {
+    padding: 115px 16px 0 16px;
+    background: variables.$primary-background;
+}
+
+.titleBlock {
+    position: relative;
+}
+
+.title {
+    color: variables.$primary-color;
+    font-size: variables.$font-size32;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 130%;
+    letter-spacing: 0.32px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    top: 5px;
+}
+
+.hr {
+    position: absolute;
+    left: 50%;
+    top: 47px;
+    transform: translateX(-50%);
+}
+
+.text {
+    color: variables.$primary-color;
+    text-align: center;
+    font-size: variables.$font-size18;
+    font-style: normal;
+    font-weight: variables.$font-weight300;
+    line-height: 150%;
+    letter-spacing: 0.18px;
+    margin-top: 48px;
+}
+
+.collapse {
+    margin-top: 48px;
+}
+
+.contact {
+    padding: 24px;
+    border-radius: 16px;
+    background: variables.$secondary-white;
+    margin-top: 48px;
+}
+
+.contactTitle {
+    color: variables.$secondary-contact-title-color;
+    text-align: center;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+}
+
+.contactText {
+    color: variables.$secondary-card-text-color;
+    text-align: center;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-weight: variables.$font-weight300;
+    line-height: 150%; 
+    margin-top: 24px;
+}
+
+.buttonDesktop {
+    width: 280px;
+    height: 48px;
+    @include mixins.flex(flex, center, center);
+    border-radius: 8px;
+    background: variables.$primary-red;
+    border: none;
+    color: variables.$secondary-white;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-family: inherit;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+    letter-spacing: 0.16px;
+    margin: 0 auto;
+    margin-top: 36px;
+    border: none;
+    cursor: pointer;
+}
+
+@media(min-width: 992px) {
+    .collapse {
+        width: 600px;
+        margin: 0 auto;
+        margin-top: 48px;
+    }
+
+    .buttonDesktop {
+        transition: 0.4s all;
+     }
+ 
+    .buttonDesktop:hover {
+         transition: 0.4s all;
+         background: variables.$secondary-blue;
+     }
+
+    .contact {
+        width: 600px;
+        margin: 0 auto;
+        margin-top: 48px;
+    }
+
+    .text {
+        margin: 0 auto;
+        margin-top: 48px;
+        width: 600px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .faq {
+        padding: 225px 76px 0 76px;
+    }
+
+    .title {
+        font-size: variables.$font-size40;
+        letter-spacing: 0.4px;
+        top: -20px;
+    }
+
+    .text {
+        width: 755px;
+        font-size: variables.$font-size32;
+        letter-spacing: 0.32px;
+        margin-top: 32px;
+    }
+
+    .collapse {
+        width: 744px;
+        margin: 0 auto;
+        margin-top: 64px;
+    }
+
+    .contact {
+        width: auto;
+        margin: 0 auto;
+        margin-top: 64px;
+    }
+
+    .contactTitle {
+        font-size: variables.$font-size22;
+    }
+
+    .contactText {
+        font-size: variables.$font-size18;
+    }
+
+    .buttonDesktop {
+        width: 262px;
+        font-size: variables.$font-size16;
+        font-style: normal;
+        margin: 0 auto;
+        margin-top: 36px;
+    }
+
+    .hr {
+        top: 33px;
+    }
+}

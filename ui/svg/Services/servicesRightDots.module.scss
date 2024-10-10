@@ -1,0 +1,15 @@
+.rightDots {
+    display: none;
+    position: absolute;
+    top: -117px;
+    right: 0;
+}
+
+@media(min-width: 1280px) {
+    .rightDots {
+        display: block;
+        position: absolute;
+        top: -165px;
+        right: 0;
+    }
+}

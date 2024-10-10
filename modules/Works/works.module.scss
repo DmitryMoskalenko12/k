@@ -1,0 +1,224 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+
+.works {
+    background: variables.$primary-background;
+    padding: 88px 16px 0 16px;
+}
+
+.titleBlock {
+    position: relative;
+}
+
+.title {
+    color: variables.$primary-color;
+    font-size: variables.$font-size32;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 130%;
+    letter-spacing: 0.32px;
+    text-align: center;
+    position: relative;
+    top: 5px;
+    z-index: 5;
+}
+
+.hr {
+    position: absolute;
+    left: 50%;
+    top: 47px;
+    transform: translateX(-50%);
+}
+
+.text {
+    color: variables.$primary-color;
+    text-align: center;
+    font-size: variables.$font-size18;
+    font-style: normal;
+    font-weight: variables.$font-weight300;
+    line-height: 150%;
+    letter-spacing: 0.18px;
+    margin-top: 36px;
+}
+
+.buttonDesktop {
+    width: 328px;
+    height: 48px;
+    @include mixins.flex(flex, center, center);
+    text-decoration: none;
+    border-radius: 8px;
+    background: variables.$primary-red;
+    color: variables.$secondary-white;
+    font-size: variables.$font-size16;
+    font-style: normal;
+    font-family: inherit;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+    letter-spacing: 0.16px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+    margin-top: 48px;
+}
+
+.wrapper1, .wrapper2, .wrapper3, .wrapper4, .wrapper5 {
+    position: relative;
+    height: 238px;
+    border-radius: 16px;
+    border: 1px solid variables.$secondary-blue;
+    background: variables.$secondary-white;
+    padding: 16px 20px 0px 20px;
+}
+
+.wrapper1 {
+    border: 1px solid variables.$secondary-blue; 
+}
+
+.wrapper2 {
+    border: 1px solid variables.$primary-red;  
+}
+
+.wrapper4 {
+    border: 1px solid variables.$primary-red;  
+}
+
+.titleSlide {
+    color: variables.$primary-color;
+    text-align: center;
+    font-size: variables.$font-size18;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    line-height: 150%;
+}
+
+.img1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.img1Desktop {
+    display: none;
+}
+
+.swiperMain {
+    margin-top: 48px;
+}
+
+.prev {
+    display: none;
+}
+
+.next {
+    display: none;
+}
+
+@media(min-width: 992px) {
+    .buttonDesktop {
+        transition: 0.4s all;
+    }
+
+    .buttonDesktop:hover {
+        background: variables.$secondary-blue;
+        transition: 0.4s all;
+    }
+}
+
+@media(min-width: 1280px) {
+    .works {
+        padding: 225px 76px 0 76px;
+    }
+
+    .title {
+        font-size: variables.$font-size40;
+        letter-spacing: 0.4px;
+        top: 2px;
+    }
+    
+    .hr {
+        position: absolute;
+        left: 50%;
+        top: 56px;
+        transform: translateX(-50%);
+    }
+    
+    .text {
+        width: 606px;
+        font-size: variables.$font-size32;
+        margin: 0 auto;
+        margin-top: 32px;
+    }
+
+    .wrapper1, .wrapper2, .wrapper3, .wrapper4, .wrapper5 {
+        height: 400px;
+        padding: 32px 32px 0px 32px;
+    }
+
+    .img1 {
+        display: none;
+    }
+
+    .img1Desktop {
+        width: 455px;
+        height: 275px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        display: block;
+    }
+
+    .buttonDesktop {
+        margin-top: 64px;
+    }
+
+    .sliderWrapper {
+         position: relative;
+    }
+
+    .prev {
+        position: absolute;
+        @include mixins.flex(flex, center, center);
+        left: -65px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        background: variables.$secondary-white;
+        display: block;
+        border: none;
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    .prev:hover {
+        background: variables.$secondary-light-blue;
+    }
+
+    .next:hover {
+        background: variables.$secondary-light-blue;
+    }
+
+    .next {
+        position: absolute;
+        @include mixins.flex(flex, center, center);
+        right: -65px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        background: variables.$secondary-white;
+        display: block;
+        border: none;
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    .disabled {
+        pointer-events: none;
+    }
+}

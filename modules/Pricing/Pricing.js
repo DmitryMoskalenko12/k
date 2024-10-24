@@ -13,7 +13,7 @@ import { useState, useEffect } from 'react';
 import Modal from '@/components/Modal/Modal';
 import { useCallback } from "react";
 import  { Container, Engine } from "tsparticles-engine";
-import Particles from "react-particles";
+import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
 const Pricing = () => {

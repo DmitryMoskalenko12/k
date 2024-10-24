@@ -27,9 +27,9 @@
     top: var(--y);
     left: var(--x);
     transform: translate(-50%, -50%);
-    background: radial-gradient(green, transparent, transparent);
-    width: 600px;
-    height: 600px;
+    background: radial-gradient(white, transparent, transparent);
+    width: 400px;
+    height: 400px;
     opacity: 0;
     opacity: 0.5s top 0s , left 0s;
 }

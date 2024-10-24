@@ -19,7 +19,7 @@ export default async function Home({ params: { locale } }) {
       locale={locale}
       namespaces={['main']}
     >
-      <Hero t={t}/>
+      <Hero/>
       <About t={t}/>
       <Services t={t}/>
       <Benefits t={t}/>

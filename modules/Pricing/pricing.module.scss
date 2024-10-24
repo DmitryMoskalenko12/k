@@ -2,6 +2,7 @@
 @use '../../style/variables.scss';
 
 .pricing {
+    position: relative;
     background: variables.$primary-background;
     padding: 88px 16px 0 16px;
 }

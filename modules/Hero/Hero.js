@@ -57,7 +57,7 @@ const Hero = () => {
                     events: {
                         onClick: {
                             enable: true,
-                            mode: 'push',
+                            mode: 'bubble',
                         },
                         onHover: {
                             enable: true,
@@ -77,10 +77,10 @@ const Hero = () => {
                 },
                 particles: {
                     color: {
-                        value: "#FFFFFF",
+                        value: "#0072DE",
                     },
                     links: {
-                        color: "#FFFFFF",
+                        color: "#0072DE",
                         distance: 150,
                         enable: true,
                         opacity: 1,
@@ -93,7 +93,7 @@ const Hero = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 2,
+                        speed: 1,
                         straight: false,
                     },
                     number: {
@@ -116,6 +116,64 @@ const Hero = () => {
                 detectRetina: true,
             }}
         />
+      {/*   <Particles
+            id="tsparticles"
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={{
+                particles: {
+                    number: {
+                        value: 160,
+                        density: {
+                            enable: false,
+                        },
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                        anim: {
+                            speed: 0.3,
+                            size_min: 0.3,
+                        },
+                    },
+                    line_linked: {
+                        enable: false,
+                    },
+                    move: {
+                        enable: true,
+                        random: true,
+                        speed: 0.3,
+                        direction: "top",
+                        out_mode: "out",
+                    },
+                },
+                interactivity: {
+                    events: {
+                        onHover: {
+                            enable: true,
+                            mode: "bubble",
+                        },
+                        onClick: {
+                            enable: true,
+                            mode: "repulse",
+                        },
+                    },
+                    modes: {
+                        bubble: {
+                            distance: 80,
+                            duration: 2,
+                            size: 0,
+                            opacity: 0,
+                        },
+                        repulse: {
+                            distance: 80,
+                            duration: 0.4,
+                            speed: 0.2,
+                        },
+                    },
+                },
+            }}
+        /> */}
       </div>
       <div className='container'>
         <div className={classes.wrapper}>

@@ -13,6 +13,7 @@ import Practice from '@/modules/Practice/Practice';
 import Cards from '@/modules/Cards/Cards';
 import Parallax from '@/modules/Parallax/Parallax';
 import Creative from '@/modules/Creative/Creative';
+import Jungle from '@/modules/Jungle/Jungle';
 
 export default async function Home({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, ['main']);
@@ -22,7 +23,9 @@ export default async function Home({ params: { locale } }) {
       resources={resources}
       locale={locale}
       namespaces={['main']}
-    > <Practice/>
+    > 
+      <Jungle/>
+      {/* <Practice/> */}
       <Cards/>
       <Parallax/>
       <Creative/>

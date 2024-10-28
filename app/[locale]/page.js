@@ -11,6 +11,7 @@ import Faq from '@/modules/Faq/Faq';
 import FormSection from '@/modules/Form/Form';
 import Practice from '@/modules/Practice/Practice';
 import Cards from '@/modules/Cards/Cards';
+import Parallax from '@/modules/Parallax/Parallax';
 
 export default async function Home({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, ['main']);
@@ -22,6 +23,7 @@ export default async function Home({ params: { locale } }) {
       namespaces={['main']}
     > <Practice/>
       <Cards/>
+      <Parallax/>
       <Hero/>
       <About t={t}/>
       <Services t={t}/>

@@ -1,0 +1,27 @@
+.st {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: #222;
+}
+
+.hr {
+    position: relative;
+    font-size: 3em;
+    letter-spacing: 0.05em;
+    cursor: default;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.hr span {
+    color: #555;
+    transition: 0.25s;
+}
+
+.hr:hover span {
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0,
+                 0 0 15px #0f0,
+                 0 0 30px #0f0;
+}

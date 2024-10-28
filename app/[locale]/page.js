@@ -14,6 +14,7 @@ import Cards from '@/modules/Cards/Cards';
 import Parallax from '@/modules/Parallax/Parallax';
 import Creative from '@/modules/Creative/Creative';
 import Jungle from '@/modules/Jungle/Jungle';
+import Text from '@/modules/Text/Text';
 
 export default async function Home({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, ['main']);
@@ -29,6 +30,7 @@ export default async function Home({ params: { locale } }) {
       <Cards/>
       <Parallax/>
       <Creative/>
+      <Text/>
       <Hero/>
       <About t={t}/>
       <Services t={t}/>

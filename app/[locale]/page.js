@@ -10,6 +10,7 @@ import Team from '@/modules/Team/Team';
 import Faq from '@/modules/Faq/Faq';
 import FormSection from '@/modules/Form/Form';
 import Practice from '@/modules/Practice/Practice';
+import Cards from '@/modules/Cards/Cards';
 
 export default async function Home({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, ['main']);
@@ -20,6 +21,7 @@ export default async function Home({ params: { locale } }) {
       locale={locale}
       namespaces={['main']}
     > <Practice/>
+      <Cards/>
       <Hero/>
       <About t={t}/>
       <Services t={t}/>
